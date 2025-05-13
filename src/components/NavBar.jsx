@@ -45,7 +45,10 @@ const NavBar = () => {
         />
       </div>
       <div>
-        <select name="filters" onChange={(e)=>setSelectedCategory(e.target.value)}>
+        <label htmlFor="category">Filter by Category </label>
+        <select name="filters" id="category" onChange={(e)=>setSelectedCategory(e.target.value)}
+          className="bg-white rounded-sm capitalize p-1"
+          >
           {categories && categories.length>0?categories.map((category)=><option key={category} value={category}
           
           >{category}</option>):"No categories"}
