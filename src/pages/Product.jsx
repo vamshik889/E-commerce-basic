@@ -10,6 +10,7 @@ const Product = ({ ele }) => {
   const isPresent = Boolean(cartItem);
   const quantity = cartItem?.quantity || 0;
 
+
   return (
     <div className='flex flex-col justify-center items-center shadow-md shadow-purple-500 rounded-md cursor-pointer bg-white hover:bg-gray-300'>
       <div className='w-full max-w-[200px] h-[200px] flex justify-center items-center overflow-hidden'>

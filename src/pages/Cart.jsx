@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, useEffect, useState,Suspense } from "react";
 import { useAppContext } from "../context/AppProvider";
 import CartItem from "../components/CartItem";
-
+//const CartItem = lazy(()=>import("../components/CartItem"))
 const Cart = () => {
   const [total, setTotal] = useState(0);
 
@@ -60,6 +60,8 @@ const Cart = () => {
       </div>
 
       {/* Cart items */}
+     
+
       {results.length > 0 ? (
         results.map((ele) => <CartItem ele={ele} key={ele.id} />)
       ) : (
@@ -67,6 +69,8 @@ const Cart = () => {
           No Products in the cart 😒
         </div>
       )}
+     
+
     </div>
   );
 };
